@@ -27,10 +27,6 @@ function j_Legend() {
     }
 }
 
-if (5 < 25) {
-    document.write("Your brain is not fully formed yet")
-}
-
 function Height_Function() {
     Height = document.getElementById("Height").value;
     if (Height >= 60) {
@@ -40,4 +36,11 @@ function Height_Function() {
         Tall = "You are not tall enough to go skydiving!";
     }
     document.getElementById("How_tall_are_you?").innerHTML = Tall;
+}
+
+//Creating a function that includes an if statment
+function a_Hamilton() {
+    if (5 < 25) {
+        document.getElementById("Fact").innerHTML = "Your brain is not fully formed.";
+    }
 }
