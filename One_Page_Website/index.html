@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Instrument Rentals</title>
+        <meta charset="UTF-8">
+        <link href="CSS/one_page_website.css" rel="stylesheet">
+    </head>
+    <body>
+        <!--NAVBAR-->
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <ul>
+                <a href="#brass"><li>Brass Instruments</li></a>
+                <a href="#percussion"><li>Percussion Instruments</li></a>
+                <a href="#string"><li>String Instruments</li></a>
+                <a href="#woodwind"><li>Woodwind Instruments</li></a>
+                <a href="#marchingband"><li>Band Video</li></a>
+            </ul>
+        </nav>
+        <!--HEADER-->
+        <header>
+            <h1>Sound of Silence Instrument Rentals</h1>
+            <h3>Musical Instuments to rent or to own</h3>
+        </header>
+        <!--INSTRUMENT IMAGES-->
+        <section>
+            <div>
+                <h2>Choose an Instrument</h2>
+                <div class="row">
+                    <!-- Images used to opn the lightbox-->
+                    <!--TRUMPET IMAGE-->
+                    <div id="brass" class="column">
+                        <h3>Brass Instruments</h3>
+                        <img src="images/Trumpet.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="Picture of a Trumpet">
+                    </div>
+                    <!--DRUM IMAGE-->
+                    <div id="percussion" class="column">
+                        <h3>Percussion Instruments</h3>
+                        <img src="images/SnareDrum.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" alt="Picture of a Snare Drum">
+                    </div>
+                    <!--VIOLIN IMAGE-->
+                    <div id="string" class="column">
+                        <h3>String Instruments</h3>
+                        <img src="images/Violin.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" alt="Picture of a Violin">
+                    </div>
+                    <!--SAXOPHONE PICTURE-->
+                    <div id="woodwind" class="column">
+                        <h3>Woodwind Instruments</h3>
+                        <img src="Images/Saxophone.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" alt="Picture of Saxophone">
+                    </div>
+                </div>
+
+                <!-- The Modal/Lightbox -->
+                <div id="myModal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+                        <div class="mySlides">
+                            <div class="numbertext">1/4</div>
+                            <img src="images/Trumpet.jpg" style="width:25%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2/4</div>
+                            <img src="images/SnareDrum.jpg" style="width:25%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">3/4</div>
+                            <img src="images/Violin.jpg" style="width:25%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4/4</div>
+                            <img src="images/Saxophone.jpg" style="width:25%">
+                        </div>
+
+                        <!-- Next/previous controls -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <!-- Caption text -->
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--VIDEOS-->
+        <section>
+            <!--MARCHING BAND VIDEO-->
+            <div id="marchingband">
+                <h3>Band Video</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4qMsWGDHUpE?si=2IstvOmz3A_H4fjr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        <!--CONTACT FORM-->
+        <section>
+            <div id="contact">
+                <h2>Contact Us</h2>
+                <h3>Want more information about our Instruments
+                    <br>
+                    Contact us here!
+                </h3>
+                <form>
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                    <br>
+                    <input type="email" placeholder="Email">
+                    <input type="tel" placeholder="Phone Number">
+                    <br>
+                    <textarea placeholder="Type message here..."></textarea>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+        <!--FOOTER-->
+        <footer>
+            <table>
+                <tr>
+                    <td>
+                        <p>Sound of Silence Instrument Rentals&reg;</p>
+                    </td>
+                    <td>
+                        <p>5941 Music Drive</p>
+                        <p>Instrument, NY 14902</p>
+                    </td>
+                    <td>
+                        <p>585-456-7777</p>
+                    </td>
+                </tr>
+            </table>
+        </footer>
+    <script src="JS/one_page_website.js"></script>
+    </body>
+</html>
