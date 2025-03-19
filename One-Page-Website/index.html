@@ -2,8 +2,9 @@
 <html>
     <head>
         <title>Instrument Rentals</title>
-        <meta charset="UTF-8">
-        <link href="CSS/one_page_website.css" rel="stylesheet">
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/one_page_website.css" rel="stylesheet">
+        <script src="JS/one_page_website.js" defer></script>
     </head>
     <body>
         <!--NAVBAR-->
@@ -28,62 +29,80 @@
         <!--INSTRUMENT IMAGES-->
         <section>
             <div>
-                <h2>Choose an Instrument</h2>
+                <h2 style="text-align:center">Choose an Instrument</h2>
                 <div class="row">
-                    <!-- Images used to opn the lightbox-->
                     <!--TRUMPET IMAGE-->
-                    <div id="brass" class="column">
+                    <div class="column" id="brass">
                         <h3>Brass Instruments</h3>
-                        <img src="images/Trumpet.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="Picture of a Trumpet">
+                        <img src="images/Trumpet.jpg" style="width:100%"
+                        onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="Picture of a Trumpet">
                     </div>
                     <!--DRUM IMAGE-->
-                    <div id="percussion" class="column">
+                    <div class="column" id="percussion">
                         <h3>Percussion Instruments</h3>
-                        <img src="images/SnareDrum.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" alt="Picture of a Snare Drum">
+                        <img src="images/SnareDrum.jpg" style="width:100%"
+                        onclick="openModal();currentSlide(2)" class="hover-shadow cusor" alt="Picture of a Snare Drum">
                     </div>
                     <!--VIOLIN IMAGE-->
-                    <div id="string" class="column">
+                    <div class="column" id="string">
                         <h3>String Instruments</h3>
-                        <img src="images/Violin.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" alt="Picture of a Violin">
+                        <img src="images/Violin.jpg" style="width:100%"
+                        onclick="openModal();currentSlide(3)" class="hover-shadow cursor" alt="Picture of a Violin">
                     </div>
                     <!--SAXOPHONE PICTURE-->
-                    <div id="woodwind" class="column">
+                    <div class="column" id="woodwind">
                         <h3>Woodwind Instruments</h3>
-                        <img src="Images/Saxophone.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" alt="Picture of Saxophone">
+                        <img src="Images/Saxophone.jpg" style="width:100%"
+                        onclick="openModal();currentSlide(4)" alt="Picture of Saxophone">
                     </div>
                 </div>
 
-                <!-- The Modal/Lightbox -->
                 <div id="myModal" class="modal">
                     <span class="close cursor" onclick="closeModal()">&times;</span>
                     <div class="modal-content">
+
                         <div class="mySlides">
-                            <div class="numbertext">1/4</div>
+                            <div class="numbertext">1 / 4</div>
                             <img src="images/Trumpet.jpg" style="width:25%">
                         </div>
 
                         <div class="mySlides">
-                            <div class="numbertext">2/4</div>
+                            <div class="numbertext">2 /4</div>
                             <img src="images/SnareDrum.jpg" style="width:25%">
                         </div>
 
                         <div class="mySlides">
-                            <div class="numbertext">3/4</div>
+                            <div class="numbertext">3 / 4</div>
                             <img src="images/Violin.jpg" style="width:25%">
                         </div>
 
                         <div class="mySlides">
-                            <div class="numbertext">4/4</div>
+                            <div class="numbertext">4 / 4</div>
                             <img src="images/Saxophone.jpg" style="width:25%">
                         </div>
 
-                        <!-- Next/previous controls -->
                         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                         <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-                        <!-- Caption text -->
                         <div class="caption-container">
                             <p id="caption"></p>
+                        </div>
+
+                        <div class="column">
+                            <img class="demo cursor" src="images/Trumpet.jpg" style="width:25%"
+                            onclick="currentSlide(1)" alt="image of Trumpet">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="images/SnareDrum.jpg" style="width:25%"
+                            onclick="currentSlide(2)" alt="image of Snare Drum">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="images/Violin.jpg" style="width:25%"
+                            onclick="currentSlide(3)" alt="image of violin">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="images/Saxophone.jpg" style="width:25%"
+                            onclick="currentSlide(4)" alt="image of saxophone">
                         </div>
                     </div>
                 </div>
@@ -135,6 +154,5 @@
                 </tr>
             </table>
         </footer>
-    <script src="JS/one_page_website.js"></script>
     </body>
 </html>
