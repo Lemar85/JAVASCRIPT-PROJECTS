@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Elements Challenge</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <header>
+            <h1>Elements Challenge</h1>
+            <h2>Utilizing "The addEventListener() Method</h2>
+
+            <p>Click anywhere in the document to display the name of the author of this code</p>
+
+            <p id="demo"></p>
+
+            <script>
+                document.addEventListener("click", myFunction);
+
+                function myFunction() {
+                    document.getElementById("demo").innerHTML = "Lemar is the author of this code";
+                }
+            </script>
+        </header>
+    </body>
+</html>
