@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JSON.Stringify</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+            <h1>JSON.Stringify() Assignment</h1>
+            <p id="volley"></p>
+            <script>
+                /*JS dictionary Volleyball stats*/
+                var player = {name: "Lemar", position: "Libero", team: "Pokeballers"};
+                /*convert to string format*/
+                var JSONstring = JSON.stringify(player);
+                document.getElementById("volley").innerHTML = JSONstring;
+            </script>
+
+            <h1>JSON.Parse() Assignment</h1>
+            <p id="vball"></p>
+            <script>
+                /*This is a JSON string variable*/
+                var ball = '{"make": "Mikasa", "size": "Regulation", "color": "Black/Blue"}';
+                /*Convert JSON strings to JavaScript objects*/
+                var JSONstring = JSON.parse(ball);
+                document.getElementById("vball").innerHTML = JSONstring.color + " " + JSONstring.make + " " + JSONstring.size + " size volleyball ";
+            </script>
+
+            <h1>LocalStorage() Method Assignment</h1>
+            <p id="myDog"></p>
+            <script>
+                /*set the data as a key/value pair to be saved locally in your browser*/
+                localStorage.setItem("Name", "Dax");
+                /*then use the key "Name" to return its value "Dax"*/
+                document.getElementById("myDog").innerHTML = localStorage.getItem("Name");
+            </script>
+    </body>
+</html>

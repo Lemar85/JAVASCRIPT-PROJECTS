@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="XML_Xavier"></p>
+        <script>
+            var XML_Storm, XML_Rogue;
+
+            //creates a text string
+            var Movie = "<movie>" +
+                "<title>X-Men</title>" +
+                "<director>Bryan Singer</director>" +
+                "<starring>Patrick Stewart</starring>" +
+                "<year>2000</year>" +
+                "</movie>";
+
+            //creates an XML DOM parser
+            XML_Storm = new DOMParser();
+
+            //creates a new XML DOM object using the text string
+            XML_Rogue = XML_Storm.parseFromString(Movie,"text/xml");
+
+            document.getElementById("XML_Xavier").innerHTML = 
+            XML_Rogue.getElementsByTagName("starring")[0].childNodes[0].nodeValue;
+        </script>
+    </body>
+</html>
